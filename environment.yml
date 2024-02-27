@@ -1,0 +1,9 @@
+name: potholes
+dependencies:
+  - python=3.7
+  - flask
+  - numpy
+  - pandas
+  - pip
+  - tensorflow
+  - keras
