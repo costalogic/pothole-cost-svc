@@ -15,7 +15,7 @@ This Dockerfile starts with a Python 3.7 base image, sets the working directory 
 You can build the Docker image by running:
 
 ```
-docker build -t pothole-cost-svc .
+docker build -t pothole-cost-svc . --network=host
 ```
 
 And then run the Docker container with:
