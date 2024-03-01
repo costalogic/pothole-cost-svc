@@ -8,6 +8,7 @@ WORKDIR /app
 ADD . /app
 
 # Install any needed packages specified in requirements.txt
+RUN ping google.com
 RUN pip install -r requirements.txt
 
 # Make port 5000 available to the world outside this container
