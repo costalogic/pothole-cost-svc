@@ -1,3 +1,13 @@
+Pothole-Cost-Svc
+
+This is a service for National Pothole to calculate the estimates of the prices according to a Machine Learning Model trained and contained in /data. Accoding to the Material the API return the price from `depth` , `area` and `material` 
+
+## Training Results.
+
+![CONCRETE](https://raw.githubusercontent.com/costalogic/pothole-cost-svc/main/plotCONCRETE.png)
+![ASPHALT](https://raw.githubusercontent.com/costalogic/pothole-cost-svc/main/plotASPHALT.png)
+![COLDPATCH](https://raw.githubusercontent.com/costalogic/pothole-cost-svc/main/plotCOLDPATCH.png)
+
 ## Installation on Docker
 
 This Dockerfile starts with a Python 3.7 base image, sets the working directory to /app, installs the necessary packages, exposes port 80 for the Flask application, and finally runs [`api.py`](vscode-file://vscode-app/c:/Users/jorge/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html "api.py") when the container is started.
