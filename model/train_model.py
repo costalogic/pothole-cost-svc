@@ -1,5 +1,7 @@
 # Import the necessary modules
-import model.cost_estimation as model
+import cost_estimation as model
 
 ## Entrenar el modelo
-model.train_model()
+materials = ['ASPHALT', 'CONCRETE', 'COLDPATCH']
+for material in materials:
+    model.train_model(material)

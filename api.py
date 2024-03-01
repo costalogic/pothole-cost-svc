@@ -7,7 +7,9 @@ app = Flask(__name__)
 def cost():
     area = request.args.get('area', type=float)
     depth = request.args.get('depth', type=float)
-    result = run_model(area, depth) 
+    ## Materials  ['ASPHALT', 'CONCRETE', 'COLDPATCH']
+    material = request.args.get('material', type=str)
+    result = run_model(area, depth, material) 
     return jsonify({'price': result.tolist()})
 
 if __name__ == '__main__':
