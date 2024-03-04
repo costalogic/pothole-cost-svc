@@ -15,13 +15,31 @@ This Dockerfile starts with a Python 3.7 base image, sets the working directory 
 You can build the Docker image by running:
 
 ```
-docker build -t pothole-cost-svc . --network=host
+docker build -t pothole-cost-svc . 
 ```
 
 And then run the Docker container with:
 
 ```
-docker run -p 5000:5000 my-python-app
+docker compose up -d
+```
+
+Check conainter running by :
+
+```
+docker ps
+```
+
+Access conainter running by :
+
+```
+sudo docker exec -it <container_name_or_id> bash
+```
+
+Check conainter running by :
+
+```
+sudo docker logs <container_name_or_id>
 ```
 
 This will start your Flask application inside a Docker container and it will be accessible at `localhost:4000` on your machine.
@@ -29,7 +47,7 @@ This will start your Flask application inside a Docker container and it will be 
 
 ### Request Example
 
-URL: http://127.0.0.1:5000/cost?area=44&&depth=10&&material=ASPHALT
+URL: http://nationalpothole.com:5000/cost?area=3&&depth=4&&material=ASPHALT
 ```
 GET /cost?area=44&&depth=10&&material=ASPHALT HTTP/1.1
 Connection: keep-alive
