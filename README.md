@@ -24,25 +24,25 @@ And then run the Docker container with:
 docker compose up -d
 ```
 
-Check conainter running by :
+Check conainters running by :
 
 ```
 docker ps
 ```
 
-Access conainter running by :
+Access conainter bashg sesssion running by :
 
 ```
 sudo docker exec -it <container_name_or_id> bash
 ```
 
-Check conainter running by :
+Check conainter logs running by :
 
 ```
 sudo docker logs <container_name_or_id>
 ```
 
-This will start your Flask application inside a Docker container and it will be accessible at `localhost:4000` on your machine.
+This will start your Flask application inside a Docker container and it will be accessible at `0.0.0.0:5000` on your machine.
 
 
 ### Request Example
