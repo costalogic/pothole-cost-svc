@@ -55,14 +55,18 @@ def train_model(material):
     plt.savefig('plot'+material+'.png')
     
  ##['ASPHALT', 'CONCRETE', 'COLDPATCH'],
-def run_model( area, depth, material):
+def run_model(area, depth, material):
     if material == 'ASPHALT':
-        modelo = load_model('model\data\ASPHALT.h5')
+        modelo = keras.models.load_model(os.path.join('model', 'data', 'ASPHALT.h5'))
     elif material == 'CONCRETE':
-        modelo = load_model('model\data\CONCRETE.h5')
+        modelo = keras.models.load_model(os.path.join('model', 'data', 'CONCRETE.h5'))
     elif material == 'COLDPATCH':        
-        modelo = load_model('model\data\COLDPATCH.h5')   
+        modelo = keras.models.load_model(os.path.join('model', 'data', 'COLDPATCH.h5'))   
     
-    result = modelo.predict([[area, depth]])    
-    price = result[0][0]
+    try:
+        result = modelo.predict([[area, depth]])
+        price = result[0][0]
+    except Exception as price:
+        print(f"An error occurred: {price}")
+        # Handle the exception here
     return price
